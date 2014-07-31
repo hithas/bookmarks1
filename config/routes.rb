@@ -1,0 +1,16 @@
+Rails.application.routes.draw do
+  get '/new_bookmark' => 'bookmarks#new'
+  get '/create_bookmark' => 'bookmarks#create'
+  get '/bookmarks' => 'bookmarks#index'
+  get '/bookmarks/:id' => 'bookmarks#show'
+  get '/bookmarks/:id/edit' => 'bookmarks#edit'
+  get '/bookmarks/:id/update' => 'bookmarks#update'
+  get '/bookmarks/:id/destroy' => 'bookmarks#destroy'
+  get '/users/:id' => 'user#show'
+  get '/new_user' => 'user#new'
+  get '/create_user' => 'user#create'
+  get '/users/:id/edit' => 'user#edit'
+  get '/users/:id/update' => 'user#update'
+  get '/users/:id/destroy' => 'user#destroy'
+  get '/users' => 'user#index'
+end

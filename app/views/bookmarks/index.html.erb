@@ -1,0 +1,19 @@
+<h1>Bookmarks</h1>
+
+<p><a href="/new_bookmark">Add a New Bookmark</a></p>
+
+<table> 
+  <thead></thead>
+  <tbody>
+  <% @bookmarks.each do |bookmark| %>
+    <tr>
+          <td><a href="/bookmarks/<%= bookmark.id %>"> <strong><%= bookmark.name %></strong> </a></td>
+          <td><a href="/bookmarks/<%= bookmark.id %>">Show</a> |
+        </td>
+      <td><a href="/bookmarks/<%= bookmark.id %>/edit">Edit</a> | </td> 
+      <td><a href="/bookmarks/<%= bookmark.id %>/destroy">Destroy</a> </td> 
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

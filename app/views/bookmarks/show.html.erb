@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/bookmarks">Bookmarks</a>
+    </div>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>
+        <a href="<%= @bookmark.url %>"><%= @bookmark.name %></a>
+        <small><%= @bookmark.desc %></small>
+        <br />
+      </h1>
+      <p> User: <a href="/users/<%= @user.id %>"><%= @user.name %> </a> </p>
+    </div>
+    <a href="/bookmarks/<%= @bookmark.id %>/edit">Edit</a> |
+<a href="/bookmarks/<%= @bookmark.id %>/destroy">Destroy</a>
+  </div>
+</div>
+  

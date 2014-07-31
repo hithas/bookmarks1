@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/users">Users</a>
+    </div>
+
+  </div>
+</nav>
+
+<h1>User #<%= @user.id %></h1>   
+
+<div>
+  <h2><%= @user.name %></h2>
+</div>
+<div>
+  <p><%= @user.email %></p>
+</div>
+<a href="/users/<%= @user.id %>/edit"> Edit</a> |
+<a href="/users/<%= @user.id %>/destroy">Destroy</a>
+
+<h3> Bookmarks: </h3>
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+     <li>
+        <a href="/bookmarks/<%= bookmark.id %>"><%= bookmark.name %></a>
+     </li>
+  <% end %>
+</ul>
+<a href="/new_bookmark"> Create New Bookmark </a>
+
